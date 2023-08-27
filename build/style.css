@@ -1,0 +1,25 @@
+/* background-color: #26c605;
+background-image: linear-gradient(56deg, #26c605 0%, #58db7c 50%, #ffffff 100%); */
+
+
+.homepage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #08274a;
+    background-image: linear-gradient(122deg, #08274a 0%, #4d4d61 100%);
+
+}
+
+.mainSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}

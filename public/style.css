@@ -1,0 +1,230 @@
+/* background-color: #26c605;
+background-image: linear-gradient(56deg, #26c605 0%, #58db7c 50%, #ffffff 100%); */
+
+@font-face { font-family: Homepage; src: url('./ELNATH.ttf'); } 
+@font-face { font-family: Main; src: url('./font1.otf'); } 
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.homePage{
+    font-family: Homepage;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111140;
+    background-image: linear-gradient(122deg, #111140 0%, #000000 100%);      
+    width: 100vw;
+    height: 100vh;
+}
+
+.homePage h1{
+    font-size: 12vw;
+}
+
+.mainSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 17px 19px 0 rgba(0, 0, 0, 0.2), 0 16px 120px 0 rgba(0, 0, 0, 0.19);
+    padding: 3vw;
+    height: 75vh;
+    width: 80vw;
+    border: 2px solid white;
+}
+
+.leftPage{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+}
+
+.leftPage h1{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.leftPage p{
+    letter-spacing: 1vw;
+}
+
+
+.rightPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 115%;
+    box-shadow: 0 17px 19px 0 rgba(0, 0, 0, 0.2), 0 16px 120px 0 rgba(0, 0, 0, 0.19);
+    justify-content: space-evenly;
+}
+
+.rightPage .container{
+    padding: 3vw;
+}
+
+.container h2{
+    font-size: 2.5vw;
+    cursor: pointer;
+    -webkit-text-fill-color:  white;
+    -webkit-background-clip: text;
+    background-clip: none;
+}
+
+.container h2:hover{
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color:  white;
+}
+
+#play,#multiplayer{
+    text-decoration: none;
+    outline: none;
+    border: none;
+    -webkit-text-fill-color:  white;
+    -webkit-background-clip: text;
+    background-clip: none;
+}
+
+#play:hover{
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color:  white;
+}
+
+#multiplayer:hover{
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color:  white;
+}
+
+
+/* Main                    */
+.theGame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background: linear-gradient(hsl(214, 47%, 23%) ,hsl(237, 49%, 15%));
+    font-family: Main;
+    height: 100vh;
+    gap: 1rem;
+}
+
+.theGame h1{
+    font-size: 7vw;
+    color:aliceblue;
+    margin: 0;
+}
+
+.topSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 1rem 2rem;
+}
+
+.theScore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2vw 7vw;
+    background-color: aliceblue;
+    border-radius: 25px;
+}
+
+.theScore h2{
+    color: hsl(229, 25%, 31%);
+    margin: 0;
+}
+
+.theScore h3{
+    color: hsl(229, 25%, 31%);
+    font-size: 5vw;
+    margin: 0;
+}
+
+.gameSection{
+    display: flex;
+    width: 100vw;
+}
+
+.computer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    box-shadow: 0 17px 19px 0 rgba(0, 0, 0, 0.2), 0 16px 120px 0 rgba(0, 0, 0, 0.19);
+}
+
+.computer .circle{
+    width: 12vw;
+    height: 26vh;
+}
+
+.computer .circle img{
+    width: 7rem;
+    height: 7rem;
+}
+.computer h2{
+    font-size: 4vw;
+    color: aliceblue;
+}
+
+.player{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    box-shadow: 0 17px 19px 0 rgba(0, 0, 0, 0.2), 0 16px 120px 0 rgba(0, 0, 0, 0.19);
+}
+
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 100px;
+    background-color: #111140;
+    box-shadow: 0 17px 19px 0 rgba(0, 0, 0, 0.2), 0 16px 120px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.row img{
+    width: 7vw;
+    height: 7vw;
+}
+
+.result{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.umpireSection img{
+    height: 25vw;
+    width: 25vw;
+}
+
+.selected{
+    border: 3px solid white;
+}
