@@ -26,8 +26,16 @@ body{
     height: 100vh;
 }
 
+#bg{
+    position: absolute;
+    left: 35rem;
+    top: 5rem;
+    width: 35vw;
+    opacity: 0.5;
+}
 .homePage h1{
     font-size: 12vw;
+    z-index: 1;
 }
 
 .mainSection{
@@ -38,13 +46,13 @@ body{
     padding: 3vw;
     height: 75vh;
     width: 80vw;
-    border: 2px solid white;
 }
 
 .leftPage{
     display: flex;
     width: 70%;
     flex-direction: column;
+    margin-top: 5rem;
 }
 
 .leftPage h1{
@@ -54,6 +62,7 @@ body{
 
 .leftPage p{
     letter-spacing: 1vw;
+    z-index: 1;
 }
 
 
@@ -237,19 +246,109 @@ body{
 .out{
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     background-color: aliceblue;
     height: 50vw;
     width: 70%;
-    color: rgb(129, 17, 17);
-    font-size: 5vw;
     position: absolute;
     top: 0;
     box-shadow: 0 17px 19px 0 rgba(0, 0, 0, 0.2), 0 16px 120px 0 rgba(0, 0, 0, 0.19);
+}
+
+.out h1{
+    color: rgb(129, 17, 17);
+    font-size: 5vw;
 }
 
 #back{
     text-decoration: none;
     margin-left: 4vw;
 
+}
+
+@media screen and (max-width:450px) {
+
+    .mainSection{
+        flex-direction: column;
+    }
+    
+    .container h2{
+        font-size: 4.5vw;
+    }
+
+    .homePage h1{
+        text-align: center;
+        z-index: 1;
+        
+    }
+
+    .leftPage p{
+        font-size: 12px;
+        letter-spacing: 0.5vw;
+        z-index: 1;
+    }
+
+    #bg{
+        left: 10rem;
+        top: 8rem;
+        width: 50vw;
+        opacity: 0.5;
+    }
+
+    .gameSection{
+        flex-direction: column;
+    }
+
+    .computer,.player{
+        width: 100%;
+    }
+
+    .circle{
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .computer .circle{
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .topSection{
+        width: 70%;
+        padding: 0rem 2rem;
+        gap: 1rem;
+    }
+
+    .computer .circle img{
+        width: 6rem;
+        height: 5rem;
+    }
+
+    .result{
+        width: 100%;
+    }
+
+    .computer{
+        padding: 2rem 0rem;
+    }
+
+    .theScore{
+        border-radius: 0px;
+        padding: 2vw;
+        z-index: 1;
+    }
+
+    .out{
+        height: 100vh;
+        width: 100%;
+    }
+
+    #back{
+        z-index: 2;
+    }
+
+    #back h1{
+        color: #000000;
+    }
 }

@@ -68,7 +68,6 @@ function Main(){
         const choices = document.getElementById("choices");
         if(playerChoice == computerChoice){
             decision.src = out;
-            runscore = 0;
             const title = document.getElementById("title");
             title.classList.add("hidden");
             out.classList.remove("hidden");
@@ -79,6 +78,7 @@ function Main(){
             scoreBox.style.marginLeft = "77%";
             const back = document.getElementById("back");
             back.classList.remove("hidden");
+            return runscore;
 
         }
         else if(playerChoice=="one"){
@@ -129,7 +129,9 @@ function Main(){
                 </div>
             </div>
             <div className="gameSection">
-                <div className="out hidden" id="out">OUT</div>
+                <div className="out hidden" id="out">
+                    <h1>OUT</h1>
+                </div>
                 <div className="computer">
                     <h2>Computer</h2>
                     <div className="circle" id="computerPick"></div>

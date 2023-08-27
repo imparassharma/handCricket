@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import bg from "./choices/ball.png"
 
 function Homepage(){
 
@@ -11,6 +11,7 @@ function Homepage(){
 
         <div className="homePage" id="home">
             <div className="mainSection">
+                <img id="bg" src={bg}></img>
                 <div className="leftPage">
                     <h1>HAND CRICKET</h1>
                     <p>The new cricket game</p>
