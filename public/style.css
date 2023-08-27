@@ -10,6 +10,10 @@ body{
     overflow: hidden;
 }
 
+.hidden{
+    display: none !important;
+}
+
 .homePage{
     font-family: Homepage;
     color:white;
@@ -149,6 +153,7 @@ body{
     color: hsl(229, 25%, 31%);
     font-size: 5vw;
     margin: 0;
+    font-family: Homepage;
 }
 
 .gameSection{
@@ -227,4 +232,24 @@ body{
 
 .selected{
     border: 3px solid white;
+}
+
+.out{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    height: 50vw;
+    width: 70%;
+    color: rgb(129, 17, 17);
+    font-size: 5vw;
+    position: absolute;
+    top: 0;
+    box-shadow: 0 17px 19px 0 rgba(0, 0, 0, 0.2), 0 16px 120px 0 rgba(0, 0, 0, 0.19);
+}
+
+#back{
+    text-decoration: none;
+    margin-left: 4vw;
+
 }

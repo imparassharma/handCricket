@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import one from "./choices/one.png";
 import two from "./choices/two.png";
 import three from "./choices/three.png";
@@ -63,9 +64,22 @@ function Main(){
             computerPick.innerHTML = "<img src=/static/media/six.545f986d52b060cc9846.png>";
 
         }
-
+        const out = document.getElementById("out");
+        const choices = document.getElementById("choices");
         if(playerChoice == computerChoice){
             decision.src = out;
+            runscore = 0;
+            const title = document.getElementById("title");
+            title.classList.add("hidden");
+            out.classList.remove("hidden");
+            choices.classList.add("hidden");
+            const topsec =document.getElementById("topsec");
+            topsec.style.border = "none";
+            const scoreBox = document.getElementById("scorebox");
+            scoreBox.style.marginLeft = "77%";
+            const back = document.getElementById("back");
+            back.classList.remove("hidden");
+
         }
         else if(playerChoice=="one"){
             decision.src = run1;
@@ -107,14 +121,15 @@ function Main(){
     return(
 
         <div className="theGame">
-            <div className="topSection">
-                <h1>HAND CRICKET</h1>
-                <div className="theScore">
+            <div className="topSection" id="topsec">
+                <h1 id="title">HAND CRICKET</h1>
+                <div className="theScore" id="scorebox">
                     <h2>Score</h2>
                     <h3 id="score">0</h3>
                 </div>
             </div>
             <div className="gameSection">
+                <div className="out hidden" id="out">OUT</div>
                 <div className="computer">
                     <h2>Computer</h2>
                     <div className="circle" id="computerPick"></div>
@@ -128,7 +143,8 @@ function Main(){
 
     
                 <div className="player">
-                    <div className="choices">
+                    <Link to="/" className="back hidden" id="back"><h1>BACK</h1></Link>
+                    <div className="choices" id="choices">
                         <div className="row">
                             <div className="circle" id ="one" onClick={processPlay}><img src={one} ></img></div>
                             <div className="circle" id="two" onClick={processPlay}><img src={two}></img></div>
