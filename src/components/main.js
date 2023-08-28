@@ -70,6 +70,7 @@ function Main(){
      
         const out = document.getElementById("out");
         const choices = document.getElementById("choices");
+
         if(playerChoice == computerChoice){
             decision.src = out;
             const title = document.getElementById("title");
@@ -116,6 +117,9 @@ function Main(){
             decision.src = fourRuns;
             runscore = runscore+4;
         }
+        const score = document.getElementById("score");
+        score.innerHTML = runscore;
+        console.log(runscore);
         // else if(computerChoice=="yorker" && playerChoice=="dot"){
         //         decision.src = yorker;
         //         const score = document.getElementById("score");
