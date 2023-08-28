@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.js": "/static/js/main.400330d2.js",
-    "static/media/six.png": "/static/media/six.545f986d52b060cc9846.png",
-    "static/media/run1.png": "/static/media/run1.b930fcba9bef9bb3e3bd.png",
-    "static/media/ball.png": "/static/media/ball.1bca3e85a3ac56a4413a.png",
-    "static/media/one.png": "/static/media/one.73a5cfa3b3508caeff9c.png",
-    "static/media/run2.png": "/static/media/run2.f7e8d32b2420ff3d0d74.png",
-    "static/media/two.png": "/static/media/two.73184ea207ee74702093.png",
-    "static/media/three.png": "/static/media/three.e9afb5a8996fe4e0666d.png",
-    "static/media/four.png": "/static/media/four.f44274e60dfda0c3a39c.png",
-    "static/media/five.png": "/static/media/five.aa21c40d1bdf0fea5fd5.png",
-    "static/media/fourRuns.png": "/static/media/fourRuns.2df11363afca3268efe7.png",
-    "static/media/sixRuns.png": "/static/media/sixRuns.4145503e4e10dec55003.png",
-    "static/media/legBy.png": "/static/media/legBy.9a8406c90e842f44e959.png",
-    "static/media/out.png": "/static/media/out.a4fb79c54199f799cba3.png",
-    "index.html": "/index.html",
-    "main.400330d2.js.map": "/static/js/main.400330d2.js.map"
+    "main.js": "/handCricket/static/js/main.2bb4d0b6.js",
+    "static/media/six.png": "/handCricket/static/media/six.545f986d52b060cc9846.png",
+    "static/media/run1.png": "/handCricket/static/media/run1.b930fcba9bef9bb3e3bd.png",
+    "static/media/ball.png": "/handCricket/static/media/ball.1bca3e85a3ac56a4413a.png",
+    "static/media/one.png": "/handCricket/static/media/one.73a5cfa3b3508caeff9c.png",
+    "static/media/run2.png": "/handCricket/static/media/run2.f7e8d32b2420ff3d0d74.png",
+    "static/media/two.png": "/handCricket/static/media/two.73184ea207ee74702093.png",
+    "static/media/three.png": "/handCricket/static/media/three.e9afb5a8996fe4e0666d.png",
+    "static/media/four.png": "/handCricket/static/media/four.f44274e60dfda0c3a39c.png",
+    "static/media/five.png": "/handCricket/static/media/five.aa21c40d1bdf0fea5fd5.png",
+    "static/media/fourRuns.png": "/handCricket/static/media/fourRuns.2df11363afca3268efe7.png",
+    "static/media/sixRuns.png": "/handCricket/static/media/sixRuns.4145503e4e10dec55003.png",
+    "static/media/legBy.png": "/handCricket/static/media/legBy.9a8406c90e842f44e959.png",
+    "static/media/out.png": "/handCricket/static/media/out.a4fb79c54199f799cba3.png",
+    "index.html": "/handCricket/index.html",
+    "main.2bb4d0b6.js.map": "/handCricket/static/js/main.2bb4d0b6.js.map"
   },
   "entrypoints": [
-    "static/js/main.400330d2.js"
+    "static/js/main.2bb4d0b6.js"
   ]
 }
