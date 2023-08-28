@@ -35,35 +35,39 @@ function Main(){
         event.currentTarget.classList.toggle("selected");
         console.log(playerChoice);
        
-        const random = ["one","two","three","four","five","six"];
+        const random = ["one","two","three","four","five","six","yorker"];
         const random_no = Math.floor(Math.random()*6)
         
         const computerChoice = random[random_no];
         console.log(computerChoice);
         const computerPick = document.getElementById("computerPick");
         if(computerChoice=="one"){
-            computerPick.innerHTML = "<img src=/static/media/one.73a5cfa3b3508caeff9c.png>";
+            computerPick.src = one;
         }
         else if(computerChoice=="two")
         {
-            computerPick.innerHTML = "<img src=/static/media/two.73184ea207ee74702093.png>";
+            computerPick.src = two;
+            console.log(computerPick.src);
         }
         else if(computerChoice=="three"){
-            computerPick.innerHTML = "<img src=/static/media/three.e9afb5a8996fe4e0666d.png>";
+            computerPick.src = three;
         }
         else if(computerChoice=="four")
         {
-            computerPick.innerHTML = "<img src=/static/media/four.f44274e60dfda0c3a39c.png>";
+            computerPick.src = four;
         }
         else if(computerChoice=="five")
         {
-            computerPick.innerHTML = "<img src=/static/media/five.aa21c40d1bdf0fea5fd5.png>";
+            computerPick.src = five;
         }
         else if(computerChoice=="six")
         {
-            computerPick.innerHTML = "<img src=/static/media/six.545f986d52b060cc9846.png>";
-
+            computerPick.src = six;
         }
+        else if(computerChoice =="dot"){
+            computerPick.src = dotRuns;
+        }
+     
         const out = document.getElementById("out");
         const choices = document.getElementById("choices");
         if(playerChoice == computerChoice){
@@ -112,8 +116,23 @@ function Main(){
             decision.src = fourRuns;
             runscore = runscore+4;
         }
-        const score = document.getElementById("score");
-        score.innerHTML = runscore;
+        // else if(computerChoice=="yorker" && playerChoice=="dot"){
+        //         decision.src = yorker;
+        //         const score = document.getElementById("score");
+        //         score.innerHTML = runscore;
+        //         decision.src = out;
+        //         const title = document.getElementById("title");
+        //         title.classList.add("hidden");
+        //         out.classList.remove("hidden");
+        //         choices.classList.add("hidden");
+        //         const topsec =document.getElementById("topsec");
+        //         topsec.style.border = "none";
+        //         const scoreBox = document.getElementById("scorebox");
+        //         scoreBox.style.marginLeft = "77%";
+        //         const back = document.getElementById("back");
+        //         back.classList.remove("hidden");
+        //         return runscore;
+        // }
 
     }
 
@@ -134,7 +153,9 @@ function Main(){
                 </div>
                 <div className="computer">
                     <h2>Computer</h2>
-                    <div className="circle" id="computerPick"></div>
+                    <div className="circle">
+                        <img src={run5} id="computerPick"></img>
+                    </div>
                 </div>
 
                 <div className="result">
