@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/handCricket/static/js/main.2bb4d0b6.js",
+    "main.js": "/handCricket/static/js/main.785ee7e4.js",
     "static/media/six.png": "/handCricket/static/media/six.545f986d52b060cc9846.png",
     "static/media/run1.png": "/handCricket/static/media/run1.b930fcba9bef9bb3e3bd.png",
     "static/media/ball.png": "/handCricket/static/media/ball.1bca3e85a3ac56a4413a.png",
@@ -15,9 +15,9 @@
     "static/media/legBy.png": "/handCricket/static/media/legBy.9a8406c90e842f44e959.png",
     "static/media/out.png": "/handCricket/static/media/out.a4fb79c54199f799cba3.png",
     "index.html": "/handCricket/index.html",
-    "main.2bb4d0b6.js.map": "/handCricket/static/js/main.2bb4d0b6.js.map"
+    "main.785ee7e4.js.map": "/handCricket/static/js/main.785ee7e4.js.map"
   },
   "entrypoints": [
-    "static/js/main.2bb4d0b6.js"
+    "static/js/main.785ee7e4.js"
   ]
 }

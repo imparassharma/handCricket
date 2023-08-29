@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { input1, input2 } from "./homepage";
 import one from "./choices/one.png";
 import two from "./choices/two.png";
 import three from "./choices/three.png";
@@ -17,11 +18,20 @@ import run1 from "./choices/run1.png";
 import run2 from "./choices/run2.png";
 import run5 from "./choices/ball.png";
 let runscore = 0;
+let isMultiplay = false;
+let player1score=0;
+let player2score=0;
+let firstplayed = false;
 function Main(){
 
 
     useEffect(()=>{
         runscore = 0;
+        if(input1!=""){
+            const title = document.getElementById("title");
+            title.innerHTML = input1;
+            isMultiplay = true;
+        }
     },[])
 
     const processPlay =(event)=>{
@@ -33,21 +43,20 @@ function Main(){
         const decision = document.getElementById("decision");
         const playerChoice = event.currentTarget.id;
         event.currentTarget.classList.toggle("selected");
-        console.log(playerChoice);
+    
        
         const random = ["one","two","three","four","five","six","yorker"];
         const random_no = Math.floor(Math.random()*6)
         
         const computerChoice = random[random_no];
-        console.log(computerChoice);
         const computerPick = document.getElementById("computerPick");
+
         if(computerChoice=="one"){
             computerPick.src = one;
         }
         else if(computerChoice=="two")
         {
             computerPick.src = two;
-            console.log(computerPick.src);
         }
         else if(computerChoice=="three"){
             computerPick.src = three;
@@ -70,9 +79,15 @@ function Main(){
      
         const out = document.getElementById("out");
         const choices = document.getElementById("choices");
-
+        
+    
+       
         if(playerChoice == computerChoice){
-            decision.src = out;
+            console.log(firstplayed);
+            if(firstplayed == false)
+            {
+                player1score = runscore;
+            }
             const title = document.getElementById("title");
             title.classList.add("hidden");
             out.classList.remove("hidden");
@@ -81,8 +96,15 @@ function Main(){
             topsec.style.border = "none";
             const scoreBox = document.getElementById("scorebox");
             scoreBox.style.marginLeft = "77%";
-            const back = document.getElementById("back");
-            back.classList.remove("hidden");
+           
+            if(isMultiplay ==true)
+            {
+                const player1score = runscore;
+                const nextplayer = document.getElementById("nextplayer");
+                nextplayer.classList.remove("hidden");
+                nextplayer.style.marginLeft= "14vw";
+            }
+    
             return runscore;
 
         }
@@ -117,9 +139,43 @@ function Main(){
             decision.src = fourRuns;
             runscore = runscore+4;
         }
+
         const score = document.getElementById("score");
         score.innerHTML = runscore;
+        
         console.log(runscore);
+        if(firstplayed ==true)
+        {
+            player2score = runscore;
+            if(player2score>player1score){
+                const out = document.getElementById("out");
+                out.classList.remove("hidden");
+                out.innerHTML = "<h1>"+input2+" Wins!<h2>"
+            }
+            else{
+                const out = document.getElementById("out");
+                out.classList.remove("hidden");
+                out.innerHTML = "<h1>"+input1+" Wins!<h2>"
+            }
+            console.log("firsplayer"+player1score);
+            console.log("secondplayer"+player2score);
+            const title = document.getElementById("title");
+            title.classList.add("hidden");
+            out.classList.remove("hidden");
+            choices.classList.add("hidden");
+            const topsec =document.getElementById("topsec");
+            topsec.style.border = "none";
+            topsec.style.marginTop = "11rem";
+            const scoreBox = document.getElementById("scorebox");
+            scoreBox.style.marginLeft = "77%";
+            const score2 = document.getElementById("score2");
+            score2.innerHTML = player1score;
+            const scorebox2 = document.getElementById("scorebox2");
+            scorebox2.classList.remove("hidden");
+            const player2 = document.getElementById("player2");
+            player2.innerHTML = "Player 2";
+        
+        }
         // else if(computerChoice=="yorker" && playerChoice=="dot"){
         //         decision.src = yorker;
         //         const score = document.getElementById("score");
@@ -140,15 +196,42 @@ function Main(){
 
     }
 
+    const processMultiplay=(event)=>{
+        runscore = 0;
+        const out = document.getElementById("out");
+        const choices = document.getElementById("choices");
+        out.classList.add("hidden");
+        choices.classList.remove("hidden");
+        const nextplayer = document.getElementById("nextplayer");
+        nextplayer.classList.add("hidden");
+        const topsec =document.getElementById("topsec");
+        topsec.style.border = "2px solid white";
+        const title = document.getElementById("title");
+        title.classList.remove("hidden");
+        title.innerHTML = input2;
+        const scoreBox = document.getElementById("scorebox");
+        scoreBox.style.marginLeft = 0;
+        const score = document.getElementById("score");
+        score.innerHTML = runscore;
+        player2score = runscore;
+        firstplayed = true;
+    }
+
 
     return(
 
         <div className="theGame">
             <div className="topSection" id="topsec">
                 <h1 id="title">HAND CRICKET</h1>
-                <div className="theScore" id="scorebox">
-                    <h2>Score</h2>
-                    <h3 id="score">0</h3>
+                <div className="scoreSection" id="scorebox">
+                    <div className="theScore hidden" id="scorebox2">
+                        <h2 id="player1">player 1</h2>
+                        <h3 id="score2">0</h3>
+                    </div>
+                    <div className="theScore" id="scorebox1">
+                        <h2 id="player2">Score</h2>
+                        <h3 id="score">0</h3>
+                    </div>
                 </div>
             </div>
             <div className="gameSection">
@@ -171,6 +254,7 @@ function Main(){
     
                 <div className="player">
                     <Link to="/" className="back hidden" id="back"><h1>BACK</h1></Link>
+                    <div className="back hidden" id="nextplayer" onClick={processMultiplay}><h1>NEXT PLAYER</h1></div>
                     <div className="choices" id="choices">
                         <div className="row">
                             <div className="circle" id ="one" onClick={processPlay}><img src={one} ></img></div>
