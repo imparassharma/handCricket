@@ -99,6 +99,8 @@ function Main(){
             const back = document.getElementById("back");
             back.style.zIndex = "2";
             back.classList.remove("hidden");
+            const nextplayer = document.getElementById("nextplayer");
+            nextplayer.classList.add("hidden");
            
             if(isMultiplay ==true)
             {
@@ -202,6 +204,8 @@ function Main(){
     const processMultiplay=(event)=>{
         runscore = 0;
         const out = document.getElementById("out");
+        const back = document.getElementById("back");
+        back.classList.add("hidden");
         const choices = document.getElementById("choices");
         out.classList.add("hidden");
         choices.classList.remove("hidden");
