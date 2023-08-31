@@ -410,4 +410,16 @@ body{
     #back h1{
         color: #000000;
     }
+
+    .multiPlayer{
+        width: 50vw;
+    }
+
+    #nextplayer{
+        z-index: 2;
+    }
+
+    #nextplayer h1{
+        color: #000000;
+    }
 }

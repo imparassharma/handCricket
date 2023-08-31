@@ -96,6 +96,9 @@ function Main(){
             topsec.style.border = "none";
             const scoreBox = document.getElementById("scorebox");
             scoreBox.style.marginLeft = "77%";
+            const back = document.getElementById("back");
+            back.style.zIndex = "2";
+            back.classList.remove("hidden");
            
             if(isMultiplay ==true)
             {
