@@ -110,7 +110,7 @@ function Main(){
                 nextplayer.style.marginLeft= "14vw";
             }
     
-            return runscore;
+            return;
 
         }
         else if(playerChoice=="one"){
@@ -155,13 +155,16 @@ function Main(){
             if(player2score>player1score){
                 const out = document.getElementById("out");
                 out.classList.remove("hidden");
-                out.innerHTML = "<h1>"+input2+" Wins!<h2>"
+                out.innerHTML = "<h1>"+input2+" Wins!<h2>";
             }
             else{
                 const out = document.getElementById("out");
                 out.classList.remove("hidden");
                 out.innerHTML = "<h1>"+input1+" Wins!<h2>"
             }
+            const back = document.getElementById("back");
+            back.style.zIndex = "2";
+            back.classList.remove("hidden");
             console.log("firsplayer"+player1score);
             console.log("secondplayer"+player2score);
             const title = document.getElementById("title");
